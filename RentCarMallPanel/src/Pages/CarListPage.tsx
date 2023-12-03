@@ -16,6 +16,7 @@ export const CarListPage: React.FC = () => {
     useEffect(() => {
         new GetCarInfoMessage().send(
             data => {
+                //define a String s here
                 const parsedData: CarInfo[] = JSON.parse(data)
                 setVehicleList(parsedData)
             },
